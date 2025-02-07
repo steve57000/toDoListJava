@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Main {
+public class ToDoListJava {
 
     private static final List<Task> tasks = new ArrayList<>();
     // Pour cet exemple, nous créons un utilisateur unique.
@@ -15,7 +15,6 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         boolean exit = false;
-        System.out.println("Bienvenue : " + getCurrentUser().getFirstName() + " " + getCurrentUser().getLastName());
 
         while (!exit) {
             afficherMenu();
@@ -172,9 +171,5 @@ public class Main {
         } catch (NumberFormatException e) {
             System.out.println("Format d'id invalide.");
         }
-    }
-
-    public static User getCurrentUser() {
-        return currentUser;
     }
 }

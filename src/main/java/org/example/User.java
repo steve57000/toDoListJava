@@ -6,10 +6,12 @@ public class User {
     private static long counter = 0;
     private final long id;
     private String firstName;
+    private String lastName;
 
-    public User(String firstName) {
+    public User(String firstName, String lastName) {
         this.id = ++counter;
         this.firstName = firstName;
+        this.lastName = lastName;
     }
 
     public long getId() {
@@ -22,6 +24,14 @@ public class User {
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     @Override
@@ -40,6 +50,6 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{id=" + id + ", firstName='" + firstName + '\'' + '}';
+        return "User{id=" + id + ", firstName='" + firstName + '\'' + ", lastName='" + lastName + '\'' + '}';
     }
 }
